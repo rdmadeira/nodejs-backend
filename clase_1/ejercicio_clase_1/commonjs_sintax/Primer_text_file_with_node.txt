@@ -1,0 +1,2 @@
+Este es un primer archivo creado por NodeJs con este texto inserido.
+Este texto se agregó en la linea de abajo con el caracter de break de linea 
