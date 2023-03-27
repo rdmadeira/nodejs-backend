@@ -1,7 +1,7 @@
 import fs from 'fs';
 console.log(process.argv); // [String: path de ubicacion de node, String: path de ubicación del archivo index que se está ejecutando, otro argumento que existe en la consola]
 
-// Lo que se escriba en la consola, aparece en el argv array. Esto nos dá poder para crear CLIs:
+// Lo que se escriba en la consola, aparece en el argv array. Esto nos dá poder para crear CLIs (Common Line Interfaces):
 if(process.argv[2] === "create") {
     fs.writeFileSync("hola.js", "let hola = 'hola';"); // al escribir en la consola 'node primerCli.js create', se ejecuta la creación del archivo.
 } else if(process.argv[2] === "version" || process.argv[2] === "-v") {
