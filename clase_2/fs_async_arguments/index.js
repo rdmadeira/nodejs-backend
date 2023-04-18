@@ -24,13 +24,13 @@ let leerHtmlAsync = fs.readFile('hola.html', (err, data) => { // readFile pide u
     console.log(data, '- representación hexadecimal de:', data.toString());
 });
 
-/*// Para demonstrar ordenes de ejecución sinc vs asinc:
+// Para demonstrar ordenes de ejecución sinc vs asinc:
 for(let i=0; i < 100; i++) {
     console.log("Primer console.log");
 }
 
 for(let i=0; i < 100; i++) {
     console.log("Segundo console.log");
-} */
+}
 
 // argv:
