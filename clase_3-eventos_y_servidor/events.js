@@ -5,6 +5,9 @@ class EventEmitter { // es como se puede crear un objeto de listeners de acuerdo
     on(type, listener) { // metodo que crea o adiciona una funcion a un tipo de evento
         this.events[type] = this.events[type] || []
         this.events[type].push(listener)
+        // Ejemplos practicos: 
+        /// grabar nuevo usuario en base de datos
+        /// emitir otro evento 
     }
     emit(type, param) { // metodo que ejecuta o dispara (dispatch) la funcion
         if(this.events[type]) {
