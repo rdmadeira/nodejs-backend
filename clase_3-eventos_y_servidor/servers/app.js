@@ -1,5 +1,7 @@
 import http from 'http';
 import fs from 'fs';
+import users from './users.json' assert { type: 'json' };
+import { v4 as uuidv4 } from 'uuid';
 
 const server = http.createServer(
   /* Pide como parametro una funcion callback */ (req, res) => {
@@ -26,6 +28,7 @@ const server = http.createServer(
             <body>
                 <h1>Hola mi App desde Node</h1>
                 <a href="about">Ir a about</a>
+                <a href="users">Ir a users</a>
             </body>
         </html>
         `);
@@ -87,6 +90,37 @@ const server = http.createServer(
       res.statusCode = 302; // En el Network de devtools, aparecerá el status 302 como found
       res.setHeader('Location', '/');
       res.end();
+    } else if (url === '/users' && method === 'GET') {
+      res.setHeader('Content-Type', 'text/html');
+      res.write(`
+        <html>
+            <head>
+                <title>Mi app Node</title>
+            </head>
+            <body>
+            <a href="/">Back to Home</a>
+            ${Object.keys(users).map((key) => {
+              return `<p>${users[key]}</p>`;
+            })}
+                <form action="/users" method="POST">
+                    <input name="users">
+                    <button type="submit">Send</button>
+                </form>
+            </body>
+        </html>
+        `);
+      return res.end();
+    } else if (url === '/users' && method === 'POST') {
+      req.on('data', (chunk) => {
+        const newUser = chunk.toString().split('=')[1].replaceAll('+', ' ');
+        const newId = uuidv4();
+        users[newId] = newUser;
+        Object.keys(users).forEach((userId) => console.log(userId));
+        fs.writeFileSync('users.json', JSON.stringify(users));
+      });
+      res.statusCode = 302;
+      res.setHeader('Location', '/users');
+      return res.end();
     } else {
       res.setHeader('Content-Type', 'text/html');
       res.write(`
