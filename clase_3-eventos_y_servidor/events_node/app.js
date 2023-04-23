@@ -1,4 +1,5 @@
 import Saludos from "./extend_events.js";
+import NotesEvents from "./share_events.js";
 
 const Saludo2 = new Saludos();
 
@@ -12,3 +13,7 @@ Saludo2.on('saludo', (data) => {
 Saludo2.emit('saludo', 'Rodri');
 Saludo2.saludar('Rodri');
 
+
+// ---------------------------------------------------------------------
+
+NotesEvents.crearNota('create:note', {nota: 'lalalla'})

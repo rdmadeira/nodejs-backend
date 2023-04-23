@@ -11,7 +11,12 @@ class Saludos extends EventEmitter {
         this.saludo = "Hola!!!"                    
     }
     saludar (data) {
+        // Acá puedo hacer lo que yo quiero...
+        // Ejs.: registrar algo, crear o modificar una db, etc. 
         console.log(`${this.saludo}: ${data}`);
+
+
+        // Cuando termine, dispara el evento... 
         this.emit('saludo', data)
     } 
 }
