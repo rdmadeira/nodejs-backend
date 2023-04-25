@@ -42,7 +42,7 @@ app.get('/about', (req, res) => {
 import contacts from './contacts.json' assert { type: 'json' };
 
 app.get('/data', (req, res) => /* esta función es el controlador, o handler */ {
-  res.json(contacts, { type: 'application/json' });
+  res.json(contacts);
 });
 
 // express utiliza el listen de node. Se ahorra el create server de node.
