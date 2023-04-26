@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon express_01.js",
-    "start2": "nodemon express_02.js"
+    "start2": "nodemon express_02.js",
+    "start3": "nodemon express_03.js"
   },
   "keywords": [],
   "author": "",
