@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 
 //app.use() corre para todas las rutas:
-app.use(express.static('public'));
+app.use(express.static('public')); // - terminó acá...
 
 app.all('/*'); // Para cualquier ruta, se direcciona a la carpeta public, o sea, nuestro frontend.
 
