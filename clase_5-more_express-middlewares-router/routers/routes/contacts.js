@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
   const key = name + ' ' + lastname;
   contacts[key] = { name, lastname, phone };
   saveContacts(contacts);
-  res.json({ message: 'successful created - contact', data: contacts[key] });
+  res.json({ message: 'contact successfully created', data: contacts[key] });
 });
 
 export default router;
