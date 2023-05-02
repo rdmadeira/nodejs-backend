@@ -7,13 +7,22 @@
     <title>UPC Rest API</title>
   </head>
   <body>
-    <form method="post" action="/api">
+    <form method="post" action="/api/users">
       <h3>Create user:</h3>
       <input name="name" id="name" placeholder="name" />
       <input name="lastname" id="lastname" placeholder="lastname" />
       <input name="email" id="email" placeholder="email" type="email" />
       <button type="submit">Send</button>
     </form>
+    <hr />
+    <hr />
+    <h3>Get user:</h3>
+    <form method="post" action="/api/users/user">
+      <input name="email" id="email" placeholder="input the email" />
+      <button type="submit">Find</button>
+    </form>
+    <hr />
+    <hr />
     <a href="/api/users">Go to Users</a>
   </body>
 </html>
