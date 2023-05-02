@@ -1,11 +1,20 @@
 import express from 'express';
-import path from 'path';
+import {
+  postsGetHandler,
+  postsPostHandler,
+  userPostsGetHandler,
+} from '../handlers/postsHandler.js';
+
 import { __dirname } from '../paths.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/pages/index.html'));
-});
+router.get('/:id/', userPostsGetHandler);
+
+router.post('/:id/', postsPostHandler);
+
+router.get('/', postsGetHandler);
+
+router.post('/', postsPostHandler);
 
 export default router;

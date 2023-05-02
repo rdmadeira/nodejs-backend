@@ -23,6 +23,23 @@
     </form>
     <hr />
     <hr />
+    <form method="post" action="/api/posts/">
+      <h3>Create Post:</h3>
+      <input name="userId" id="userId" placeholder="userId" />
+      <input name="title" id="title" placeholder="title" />
+      <textarea
+        name="body"
+        id="body"
+        placeholder="Enter your post"
+        cols="40"
+        rows="10"
+      >
+My new post</textarea
+      >
+      <button type="submit">Send</button>
+    </form>
+    <hr />
+    <hr />
     <a href="/api/users">Go to Users</a>
   </body>
 </html>
