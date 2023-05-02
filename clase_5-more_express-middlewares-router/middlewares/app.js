@@ -21,7 +21,7 @@ const fnParaAbout = (req, res, next) => {
   }
 };
 
-//app.use() corre para todas las rutas:
+//app.use(fn) corre para todas las rutas:
 app.use(express.static('public'));
 
 app.use('/about', fnParaAbout); // corre para todos los metodos del path about (get, put, post, etc.)

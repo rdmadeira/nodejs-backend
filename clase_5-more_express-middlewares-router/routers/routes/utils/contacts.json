@@ -1,17 +1,1 @@
-{
-  "Rodrigo Nascimento": {
-    "name": "Rodrigo",
-    "lastname": "Nascimento",
-    "phone": "1148383838"
-  },
-  "PAula Delgado": {
-    "name": "PAula",
-    "lastname": "Delgado",
-    "phone": "1134363658"
-  },
-  "RODRIGO MADEIRA": {
-    "name": "RODRIGO",
-    "lastname": "MADEIRA",
-    "phone": "01169625305"
-  }
-}
+{"Rodrigo Nascimento":{"name":"Rodrigo","lastname":"Nascimento","phone":"1148383838"},"PAula Delgado":{"name":"PAula","lastname":"Delgado","phone":"1134363658"},"RODRIGO MADEIRA":{"name":"RODRIGO","lastname":"MADEIRA","phone":"01169625305"},"RODRIGO NASCIMENTO2":{"name":"RODRIGO","lastname":"NASCIMENTO2","phone":"01169625305"}," ":{"name":"","lastname":"","phone":""}}

@@ -33,6 +33,7 @@ router.get('/', (req, res) => {
       <input name="phone" id="phone" placeholder="phone" type="tel" />
       <button type="submit">Send</button>
     </form>
+    <a href='/api/contacts'>Go to Contacts</a>
   </body>
 </html>
 `);
