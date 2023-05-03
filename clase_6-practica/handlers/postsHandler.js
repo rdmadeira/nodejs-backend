@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const userPostsGetHandler = (req, res) => {
   const posts = getPosts();
-  const userPosts = posts.filter((post) => post.userId === req.params.id);
-  console.log(userPosts);
+  const userPosts = posts.filter((post) => post.userId === req.params.userId);
+
   if (userPosts.length > 0) {
     res.status(200).json({
       status: 'success',

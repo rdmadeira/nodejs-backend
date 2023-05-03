@@ -1,11 +1,14 @@
 import express from 'express';
-import path from 'path';
 import { __dirname } from '../paths.js';
+import {
+  createPostCommentHandler,
+  getPostCommentsHandler,
+} from '../handlers/commentsHandlers.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/pages/index.html'));
-});
+router
+  .get('/post/:postId', getPostCommentsHandler)
+  .post('/post/:postId', createPostCommentHandler);
 
 export default router;

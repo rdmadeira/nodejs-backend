@@ -9,12 +9,14 @@ import { __dirname } from '../paths.js';
 
 const router = express.Router();
 
-router.get('/:id/', userPostsGetHandler);
+router
+  .get('/:userId/', userPostsGetHandler)
 
-router.post('/:id/', postsPostHandler);
+  .post('/:userId/', postsPostHandler);
 
-router.get('/', postsGetHandler);
+router
+  .get('/', postsGetHandler)
 
-router.post('/', postsPostHandler);
+  .post('/', postsPostHandler);
 
 export default router;
