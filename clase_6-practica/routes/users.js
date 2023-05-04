@@ -6,15 +6,18 @@ import {
   usersPostHandler,
   userGetHandler,
   userGetDinamicHandler,
+  usersDeleteHandler,
 } from '../handlers/usersHandlers.js';
 
 const router = express.Router();
 
-router.get('/', usersGetHandler);
+router
+  .get('/', usersGetHandler)
 
-router.post('/', usersPostHandler);
+  .post('/', usersPostHandler)
+  .delete('/', usersDeleteHandler);
 
-router.post('/user', userGetHandler);
+router.get('/user', userGetHandler);
 
 router.get('/:id/', userGetDinamicHandler);
 

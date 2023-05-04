@@ -1,1 +1,58 @@
-[{"userId":"514a422c-6a39-42c1-a499-409abfae358c","title":"My first Post","body":"My new post - Algo","id":"a816b193-4d6f-4a44-bc34-070f32a75b76","createdAt":"2023-05-02T19:26:47.278Z"},{"userId":"514a422c-6a39-42c1-a499-409abfae358c","title":"My second Post","body":"My new post 2 - Algo, algom, algo algo, algo! Algo, algo, algo!!!","id":"8d37cc2f-dc2f-4750-840c-ee4671c5fca3","createdAt":"2023-05-02T19:27:45.054Z"},{"userId":"b5d482cf-8bfe-4a63-85cc-93056a43c181","title":"Mi First Post ","body":"My new post - de yahoo","id":"088a244a-1ff6-4a55-9cdc-c12d37b751b6","createdAt":"2023-05-02T20:07:42.478Z"},{"userId":"b6388d17-1faa-4aeb-bc3a-77a637258f68","title":"Beaba","body":"Substantivo masculino Reunião das letras que fazem parte do alfabeto; abecedário. Exercício de soletrar, dizer separadamente letra por letra. Conhecimento rudimentar e inicial de algo, especialmente falando de uma ciência, teoria, arte: está aprendendo o beabá da medicina.","id":"85403d63-39ae-4646-bf02-c19f5117d614","createdAt":"2023-05-02T20:40:51.352Z"},{"userId":"a7920119-dc3f-48e0-947f-5011622a233d","title":"Lero lero","body":"My new postEmissão ou troca de palavras ou de frases de maneira informal ou sem grande importância; conversa fiada. = LÉRIA, PALAVRÓRIO","id":"10183df0-8e09-421b-9e8c-d992a4468789","createdAt":"2023-05-02T20:43:28.291Z"},{"userId":"4bd89209-1a0b-45c2-9c32-248319fef285","title":"Lero ","body":"Emissão ou troca de palavras ou de frases de maneira informal ou sem grande importância; conversa fiada. = LÉRIA, PALAVRÓRIO","id":"1b091148-ceb2-48c9-b1c5-7fb780f89169","createdAt":"2023-05-02T20:43:56.205Z"},{"userId":"a816b193-4d6f-4a44-bc34-070f32a75b76","title":"Maluco","body":"1. Que ou quem não tem o juízo todo; que ou quem perdeu a razão ou tem distúrbios mentais. = ADOIDADO, DOIDO, LOUCO\r\n\r\n2. Maníaco; cismático.\r\n\r\n3. Que ou quem é estouvado ou extravagante. = ESTROINA","id":"a712f640-de0a-4043-9f66-d73778218df0","createdAt":"2023-05-02T20:45:21.786Z"},{"userId":"b6388d17-1faa-4aeb-bc3a-77a637258f68","title":"Rango","body":"ran·go\r\n(origem obscura)\r\nnome masculino\r\n[Brasil, Informal]  Comida ou refeição.","id":"808d53e6-5acd-4577-a950-965045e5256f","createdAt":"2023-05-02T20:46:36.546Z"}]
+[
+  {
+    "userId": "514a422c-6a39-42c1-a499-409abfae358c",
+    "title": "My first Post",
+    "body": "My new post - Algo",
+    "id": "a816b193-4d6f-4a44-bc34-070f32a75b76",
+    "createdAt": "2023-05-02T19:26:47.278Z"
+  },
+  {
+    "userId": "514a422c-6a39-42c1-a499-409abfae358c",
+    "title": "My second Post",
+    "body": "My new post 2 - Algo, algom, algo algo, algo! Algo, algo, algo!!!",
+    "id": "8d37cc2f-dc2f-4750-840c-ee4671c5fca3",
+    "createdAt": "2023-05-02T19:27:45.054Z"
+  },
+  {
+    "userId": "b5d482cf-8bfe-4a63-85cc-93056a43c181",
+    "title": "Mi First Post ",
+    "body": "My new post - de yahoo",
+    "id": "088a244a-1ff6-4a55-9cdc-c12d37b751b6",
+    "createdAt": "2023-05-02T20:07:42.478Z"
+  },
+  {
+    "userId": "b6388d17-1faa-4aeb-bc3a-77a637258f68",
+    "title": "Beaba",
+    "body": "Substantivo masculino Reunião das letras que fazem parte do alfabeto; abecedário. Exercício de soletrar, dizer separadamente letra por letra. Conhecimento rudimentar e inicial de algo, especialmente falando de uma ciência, teoria, arte: está aprendendo o beabá da medicina.",
+    "id": "85403d63-39ae-4646-bf02-c19f5117d614",
+    "createdAt": "2023-05-02T20:40:51.352Z"
+  },
+  {
+    "userId": "a7920119-dc3f-48e0-947f-5011622a233d",
+    "title": "Lero lero",
+    "body": "My new postEmissão ou troca de palavras ou de frases de maneira informal ou sem grande importância; conversa fiada. = LÉRIA, PALAVRÓRIO",
+    "id": "10183df0-8e09-421b-9e8c-d992a4468789",
+    "createdAt": "2023-05-02T20:43:28.291Z"
+  },
+  {
+    "userId": "4bd89209-1a0b-45c2-9c32-248319fef285",
+    "title": "Lero ",
+    "body": "Emissão ou troca de palavras ou de frases de maneira informal ou sem grande importância; conversa fiada. = LÉRIA, PALAVRÓRIO",
+    "id": "1b091148-ceb2-48c9-b1c5-7fb780f89169",
+    "createdAt": "2023-05-02T20:43:56.205Z"
+  },
+  {
+    "userId": "a816b193-4d6f-4a44-bc34-070f32a75b76",
+    "title": "Maluco",
+    "body": "1. Que ou quem não tem o juízo todo; que ou quem perdeu a razão ou tem distúrbios mentais. = ADOIDADO, DOIDO, LOUCO\r\n\r\n2. Maníaco; cismático.\r\n\r\n3. Que ou quem é estouvado ou extravagante. = ESTROINA",
+    "id": "a712f640-de0a-4043-9f66-d73778218df0",
+    "createdAt": "2023-05-02T20:45:21.786Z"
+  },
+  {
+    "userId": "b6388d17-1faa-4aeb-bc3a-77a637258f68",
+    "title": "Rango",
+    "body": "ran·go\r\n(origem obscura)\r\nnome masculino\r\n[Brasil, Informal]  Comida ou refeição.",
+    "id": "808d53e6-5acd-4577-a950-965045e5256f",
+    "createdAt": "2023-05-02T20:46:36.546Z"
+  }
+]

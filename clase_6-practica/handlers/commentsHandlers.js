@@ -1,6 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 import { getComments, createComment } from '../utils/comment_utils.js';
 
+export const getAllCommentsHandler = (req, res) => {
+  const allCommentsObj = getComments();
+  const allComments = Object.keys(allCommentsObj).flatMap((postId) => {
+    return allCommentsObj[postId];
+  });
+  res.status(200).json({ data: allComments });
+};
+
 export const getPostCommentsHandler = (req, res) => {
   const postId = req.params.postId;
   const postComments = getComments()[postId];

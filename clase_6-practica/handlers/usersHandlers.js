@@ -32,18 +32,19 @@ export const usersPostHandler = (req, res) => {
 };
 
 export const userGetHandler = (req, res, next) => {
-  const userEmail = req.body.email;
+  const userEmail = req.query.email;
+  console.log(userEmail);
   const users = getUsers();
   const user = users.find((us) => us.email === userEmail);
 
   if (user) {
     res
       .status(200)
-      .json({ message: 'User finded!', data: user, status: 'success' });
+      .json({ message: 'User found!', data: user, status: 'success' });
   } else {
     res
       .status(202)
-      .json({ message: 'No user finded', data: null, status: 'error' });
+      .json({ message: 'No user found', data: null, status: 'error' });
   }
 };
 export const userGetDinamicHandler = (req, res, next) => {
@@ -60,5 +61,25 @@ export const userGetDinamicHandler = (req, res, next) => {
       .status(202)
       .json({ message: 'No user finded', data: null, status: 'error' });
     next();
+  }
+};
+
+export const usersDeleteHandler = (req, res) => {
+  const users = getUsers();
+  const userId = req.body;
+  const userIndexToDelete = users.findIndex((user) => user.id == userId);
+  const deletedUser =
+    userIndexToDelete >= 0 ? users.splice(userIndexToDelete, 1) : null;
+
+  saveUsers(users);
+
+  if (deletedUser) {
+    res.json({
+      data: deletedUser[0],
+      message: 'Successfully deleted user',
+      status: 'success',
+    });
+  } else {
+    res.json({ data: null, message: 'User not found!', status: 'error' });
   }
 };
