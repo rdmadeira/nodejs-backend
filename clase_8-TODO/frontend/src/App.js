@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { ChakraProvider, Box, Flex } from '@chakra-ui/react';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider>
+        <Box bg="gray.100" minH="100vh" py={16}>
+          <Flex
+            as="main"
+            justifyContent="flex-start"
+            flexDirection="column"
+            m="10 auto"
+            alignItems="center"
+          >
+            HOLAAAAA
+            {/* {data?.data?.map((post) => (
+              <Post key={post._id} post={post} />
+            ))} */}
+          </Flex>
+        </Box>
+      </ChakraProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
