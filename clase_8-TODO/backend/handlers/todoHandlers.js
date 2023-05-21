@@ -10,7 +10,8 @@ export const createTodoHandler = async (req, res) => {
 
 export const getTodosHandler = async (req, res) => {
   const todos = await Todo.find(); // se no pasa ningún objecto, devuelve todo en un array!!
-  res.status(200).json({ data: todos, message: 'Getted all todos!!' });
+  console.log(todos);
+  res.json({ data: todos, message: 'Getted all todos!!' });
 };
 
 export const updateTodo = async (req, res) => {

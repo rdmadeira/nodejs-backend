@@ -3,12 +3,15 @@ import dotenv from 'dotenv';
 
 import { connectToDB } from './config/connection.js';
 import { todoRouter } from './routes/todo.js';
+import cors from 'cors';
 
 // Config
 dotenv.config(); // Reconoce el archivo como variable de entorno
 const server = express();
 connectToDB(); // Conecta a la base de datos de Mongo
 
+// Middleware habilitando cors
+server.use(cors());
 // Middlewares Globales:
 server.use(express.json());
 server.get('/', (req, res) => {
