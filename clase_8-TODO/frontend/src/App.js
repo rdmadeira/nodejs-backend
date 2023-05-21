@@ -10,8 +10,7 @@ const fn = () => {
 
 function App() {
   const { isLoading, isError, data, error } = useQuery('todos', fn);
-
-  console.log(data);
+  console.log(data?.data);
   return (
     <ChakraProvider>
       <Box bg="gray.100" minH="100vh" py={16}>
@@ -24,10 +23,8 @@ function App() {
         >
           <FormTodo />
           {isLoading ? <div>Loading...</div> : null}
-          {data ? (
-            <Todo
-              todo={{ title: 'Test Todo', description: 'Hola soy un todo' }}
-            />
+          {data?.data.length > 0 ? (
+            data.data.map((todo) => <Todo key={todo._id} todo={todo} />)
           ) : (
             <NoTodo />
           )}
