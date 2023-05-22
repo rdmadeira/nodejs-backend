@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Box, Text } from '@chakra-ui/react';
+import { Button, Box, Text, HStack, Spinner } from '@chakra-ui/react';
+import { CheckIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import { useMutation, useQueryClient } from 'react-query';
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, isLoading }) => {
   const queryClient = useQueryClient();
 
   const mutationPut = useMutation(
@@ -29,7 +30,6 @@ const Todo = ({ todo }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ id }),
       }),
     {
       onSuccess: () => {
@@ -39,7 +39,7 @@ const Todo = ({ todo }) => {
   );
 
   const completeTodoHandle = (todo) => {
-    mutationPut.mutate({ id: todo._id, isCompleted: true });
+    mutationPut.mutate({ id: todo._id, isCompleted: !todo.isCompleted });
     /* console.log(todo); */
   };
 
@@ -69,28 +69,32 @@ const Todo = ({ todo }) => {
             {todo.title}
           </Text>
           <Text>{todo.description}</Text>
-
-          <Button
-            bg="#7928CA"
-            mt="10"
-            color={'white'}
-            fontWeight="600"
-            _hover={{ bg: '#9e47f5', fontWeight: '700' }}
-            onClick={() => completeTodoHandle(todo)}
-            isDisabled={todo.isCompleted ? true : false}
-          >
-            Complete!!
-          </Button>
-          <Button
-            bg="#7928CA"
-            mt="10"
-            color={'white'}
-            fontWeight="600"
-            _hover={{ bg: '#9e47f5', fontWeight: '700' }}
-            onClick={() => deleteTodoHandle(todo)}
-          >
-            Delete!!
-          </Button>
+          <HStack spacing={'10px'} mt="10px">
+            <Button
+              bg={todo.isCompleted ? 'green' : '#7928CA'}
+              /* mt="10" */
+              color={'white'}
+              fontWeight="600"
+              _hover={{
+                bg: todo.isCompleted ? 'green.200' : '#9e47f5',
+                fontWeight: '700',
+              }}
+              onClick={() => completeTodoHandle(todo)}
+              rightIcon={todo.isCompleted ? <CheckIcon /> : null}
+            >
+              {todo.isCompleted ? 'Completed!!' : 'Complete!!'}
+            </Button>
+            <Button
+              bg="red"
+              /* mt="10" */
+              color={'white'}
+              fontWeight="600"
+              _hover={{ bg: 'red.200', fontWeight: '700' }}
+              onClick={() => deleteTodoHandle(todo)}
+            >
+              Delete!!
+            </Button>
+          </HStack>
         </Box>
       </Box>
     </motion.div>
