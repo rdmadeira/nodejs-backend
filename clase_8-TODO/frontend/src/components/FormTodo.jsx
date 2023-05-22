@@ -82,7 +82,7 @@ const FormTodo = () => {
         </FormControl>
         <Divider color={'ActiveBorder'} />
         <Button
-          bg="#7928CA"
+          bg={mutation.isError ? 'red' : '#7928CA'}
           color={'white'}
           fontWeight="600"
           _hover={{ bg: '#9e47f5', fontWeight: '700' }}
@@ -90,7 +90,11 @@ const FormTodo = () => {
           size={'sm'}
           onClick={() => mutation.mutate(formData)}
         >
-          Crear Todo
+          {mutation.isLoading
+            ? 'Enviando...'
+            : mutation.isError
+            ? 'Hubo un error...'
+            : 'Crear Todo'}
         </Button>
       </Flex>
     </Box>

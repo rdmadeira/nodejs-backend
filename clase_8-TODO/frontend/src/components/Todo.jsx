@@ -4,7 +4,7 @@ import { CheckIcon } from '@chakra-ui/icons';
 import { motion } from 'framer-motion';
 import { useMutation, useQueryClient } from 'react-query';
 
-const Todo = ({ todo, isLoading }) => {
+const Todo = ({ todo }) => {
   const queryClient = useQueryClient();
 
   const mutationPut = useMutation(
@@ -80,7 +80,13 @@ const Todo = ({ todo, isLoading }) => {
                 fontWeight: '700',
               }}
               onClick={() => completeTodoHandle(todo)}
-              rightIcon={todo.isCompleted ? <CheckIcon /> : null}
+              rightIcon={
+                mutationPut.isLoading ? (
+                  <Spinner />
+                ) : todo.isCompleted ? (
+                  <CheckIcon />
+                ) : null
+              }
             >
               {todo.isCompleted ? 'Completed!!' : 'Complete!!'}
             </Button>
