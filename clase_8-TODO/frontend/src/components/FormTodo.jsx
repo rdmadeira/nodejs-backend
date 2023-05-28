@@ -18,7 +18,7 @@ const FormTodo = () => {
   const mutation = useMutation(
     // (function, object with callbacks to handle post fetch responses)
     (newTodo) =>
-      fetch('http://localhost:5001/api/v1/todo', {
+      fetch('http://localhost:8001/api/v1/todo', {
         headers: {
           'Content-Type': 'application/json', // tiene que especificar el content type para recibir el json
         },

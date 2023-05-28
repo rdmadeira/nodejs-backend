@@ -9,7 +9,7 @@ const Todo = ({ todo }) => {
 
   const mutationPut = useMutation(
     ({ id, isCompleted }) =>
-      fetch('http://localhost:5001/api/v1/todo', {
+      fetch('http://localhost:8001/api/v1/todo', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const Todo = ({ todo }) => {
 
   const mutationDel = useMutation(
     ({ id }) =>
-      fetch('http://localhost:5001/api/v1/todo/' + id, {
+      fetch('http://localhost:8001/api/v1/todo/' + id, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

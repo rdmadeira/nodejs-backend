@@ -5,7 +5,7 @@ import FormTodo from './components/FormTodo.jsx';
 import NoTodo from './components/NoTodo.jsx';
 
 const fn = () => {
-  return fetch('http://localhost:5001/api/v1/todo').then((data) => data.json());
+  return fetch('http://localhost:8001/api/v1/todo').then((data) => data.json());
 };
 
 function App() {
